@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bulma";
+
+.modal {
+  &.is-paneled-right {
+    .modal-content {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 75%;
+      max-height: 100vh;
+      background-color: #fff;
+      padding: 3rem 2rem 10rem 2rem;
+    }
+
+    [data-dismiss="modal"] {
+      background-color: rgba(130, 128, 128, 0.4);
+    }
+  }
+}
+.title-enc {
+  position: relative;
+  .align-inside-title {
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    top: -.1rem;
+    background-color: #fff;
+
+    &.bg-body-bg {
+      background-color: #fff;
+    }
+
+    &.align-right {
+      left:initial;
+      right:0;
+    }
+  }
+}

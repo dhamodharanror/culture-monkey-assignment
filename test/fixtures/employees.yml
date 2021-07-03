@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: Steve
+  last_name: Jobs
+  email_address: steve@gmail.com
+  phone: 1234567890
+  salary: 100000
+

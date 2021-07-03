@@ -1,0 +1,21 @@
+<div class="has-text-right py-4">
+  <%= link_to "Add Employee", new_employee_path, class: "button is-success  is-outlined has-text-weight-bold", data: {remote: true} %>
+</div>
+<table class="table is-fullwidth">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th class="has-text-right">Salary</th>
+    <th>Department</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody data-tbody="employees">
+  <%= render partial: "employees", collection: @employees, as: :emp %>
+  </tbody>
+</table>
+<div class="modal-div">
+</div>

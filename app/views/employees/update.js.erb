@@ -1,0 +1,4 @@
+<%if @employee.department_name.present? %>
+$('[data-td-emp-id="<%=@employee.id %>"]').text("<%=@employee.department_name %>")
+$('.modal-div').html("")
+<%end %>

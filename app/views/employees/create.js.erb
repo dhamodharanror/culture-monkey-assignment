@@ -1,0 +1,4 @@
+<%unless @employee.errors.any? %>
+$('[data-tbody="employees"]').append("<%=j render partial:"/employees/employees",locals:{emp:@employee} %>")
+$('.modal-div').html("")
+<%end %>

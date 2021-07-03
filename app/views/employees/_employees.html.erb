@@ -1,0 +1,17 @@
+<tr data-tr-emp-id="<%= emp.id %>">
+  <td><%= emp.first_name %></td>
+  <td><%= emp.last_name %></td>
+  <td><%= emp.email_address %></td>
+  <td><%= emp.phone %></td>
+  <td class="has-text-right"><%= comma_style (emp.salary||0), precision: 0 %></td>
+  <td data-td-emp-id="<%= emp.id %>">
+    <% if emp.department_id.nil? %>
+      <%= link_to "Edit Department", edit_employee_path(emp), data: {remote: true}, class: "button is-success has-text-weight-bold is-light is-small" %>
+    <% else %>
+      <%= emp.department_name %>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to "Remove", employee_path(emp), method: :delete, data: {remote: true, confirm: "Are you sure?"}, class: "has-text-danger" %>
+  </td>
+</tr>
